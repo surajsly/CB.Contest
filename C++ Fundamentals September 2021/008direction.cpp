@@ -8,7 +8,7 @@ int main()
     char ch;
     ch = cin.get();
     int x = 0, y = 0;
-    while (ch != ' ')
+    while (ch != '\n')
     {
         if (ch == 'N')
         {
