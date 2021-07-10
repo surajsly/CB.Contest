@@ -1,4 +1,4 @@
-// 004Selectionsort.cpp
+// 005BubbleSort.cpp
 
 #include <iostream>
 using namespace std;
@@ -12,24 +12,22 @@ int main()
     {
         cin >> a[i];
     }
-
-    // starting sorting
-    for (int i = 0; i < n - 1; i++)
+    // Algo : Bubble Sort Start
+    for (int i = 0; i <= n - 1; i++)
     {
-
-        int minindex = i;
-        for (int j = i; j <= n - 1; j++)
+        int maxindex = i;
+        for (int j = 0; j <= n - i; j++)
         {
-            if (a[j] < a[minindex])
+            if (a[j] > a[maxindex])
             {
-                minindex = j;
+                swap(a[j], a[maxindex]);
             }
         }
-        swap(a[minindex], a[i]);
     }
 
     for (int i = 0; i < n; i++)
     {
         cout << a[i] << " ";
     }
+    return 0;
 }
